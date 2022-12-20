@@ -9,7 +9,7 @@ include("comunes.php");
 include ("../conectar.php");  
 
 $pdf=new PDF();
-$pdf->Open();
+// $pdf->Open();
 $pdf->AddPage();
 
 //Nombre del Listado
@@ -17,7 +17,7 @@ $pdf->SetFillColor(255,255,255);
 $pdf->SetFont('Arial','B',16);
 $pdf->SetY(40);
 $pdf->SetX(0);
-$pdf->MultiCell(290,6,"Listado de Familias",0,C,0);
+$pdf->MultiCell(290,6,"Listado de Familias",0,0);
 
 $pdf->Ln();    
 	

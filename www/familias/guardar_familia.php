@@ -7,8 +7,7 @@ if (!isset($accion)) { $accion=$_GET["accion"]; }
 $nombre=$_POST["Anombre"];
 
 if ($accion=="alta") {
-	$query_operacion="INSERT INTO familias (codfamilia, nombre, borrado) 
-					VALUES ('', '$nombre', '0')";					
+	$query_operacion="INSERT INTO familias (nombre, borrado) VALUES ('$nombre', '0')";					
 	$rs_operacion=mysqli_query($descriptor,$query_operacion);
 	if ($rs_operacion) { $mensaje="La familia ha sido dada de alta correctamente"; }
 	$cabecera1="Inicio >> Familias &gt;&gt; Nueva Familia ";
